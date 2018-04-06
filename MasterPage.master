@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    	<link rel="StyleSheet" type="text/css" href="StyleSheet.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+
+
+    <style>
+        
+        .formclass 
+        {
+            padding:20px;
+            margin:0px auto;
+            background:#f00;
+            width:200px;
+        }
+        h2
+        {
+            text-align:center;
+        }
+        .input
+        {
+            padding:4px;
+            width:100%;
+        }
+        .facebook {
+           position:fixed;
+           margin-left:30px;
+            width: 41px;
+            height: 35px;
+            text-align:right;
+            top: 157px;
+            left: 22px;
+        }
+        .twitter {
+             position:fixed;
+           margin-left:53px;
+            width: 34px;
+            height: 34px;
+            text-align:right;
+            top: 195px;
+            left: 5px;
+        }
+        .google {
+            position:fixed;
+            margin-left:300px;
+            width: 35px;
+            height: 33px;
+            text-align:right;
+            top: 126px;
+            left: -245px;
+        }
+        input[type=search] {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+width: 27%;
+            padding: 10px;
+            border-radius:0.2cm 0 0 0.2cm;
+            height: 36px;
+        }
+        button.search-button {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+width: 91px;
+            background-color: #44a41d;
+            border-radius:0 0.2cm 0.2cm 0;
+            cursor:pointer;
+            height: 36px;
+        }
+            button.search-button:hover {
+                background-color: #dd1717;
+            }
+        
+
+        .fwimage1 {
+            height: 72px;
+            width: 399px;
+        }
+        .searchbox {
+            height: 89px;
+            width: 428px;
+        }
+        
+
+  </style>      
+        
+
+</head>
+<body>
+    
+     <form id="form1" runat="server">
+         <header class="jhn">
+		<nav>
+			<h1>Hardware Acceleration Club of KUET</h1>
+			<ul id="nav">
+				<li><a class="homered" href="http://localhost:10872/">HOME</a></li>
+				<li><a class="homeblack" href="http://localhost:10872/about.aspx">ABOUT</a>
+					<ul>
+						<li><a href="http://localhost:10872/info.aspx">info</a></li>
+						<li><a>members</a></li>
+						<li><a href="http://localhost:10872/picture.aspx">innovation </a></li>
+						<li><a href="http://localhost:10872/resources.aspx">resources</a></li>
+					</ul>
+				</li>
+				<li><a class="homeblack" href="#">ONLINEORDER</a></li>
+				<li><a class="homeblack" href="#">NOTICEBOARD</a></li>
+                <li><a class="homeblack" href="http://localhost:10872/account.aspx">CREATE_ACCOUNT</a></li>
+               
+                
+                 
+			</ul>
+              
+          </nav>
+         
+    </header>
+         <div class="divider"></div>
+          <div class="fwimage1">
+		<h1 class="homepage1">Welcome to</h1>
+		<h2 class="homepage2">HACK</h2>
+	</div> 
+         <div class="searchbox">
+             <input type="search" placeholder="search.." />
+             <button class="search-button">search</button>
+         </div>
+ 
+   
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+   
+         <asp:ImageButton CssClass="facebook" ID="ImageButton4" runat="server" ImageUrl="~/img/facebook.png" />
+        
+         <asp:ImageButton CssClass="google" ID="ImageButton5" runat="server" ImageUrl="~/img/Google-plus-icon.png" />
+             
+         <asp:ImageButton CssClass="twitter" ID="ImageButton6" runat="server" ImageUrl="~/img/1fa60fad-471508.png" />
+         </form>
+       
+</body>
+</html>
